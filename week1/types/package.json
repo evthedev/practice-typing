@@ -1,0 +1,17 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "description": "Let's add types!",
+  "main": "result.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AgustinCB",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.19",
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0",
+    "tsc": "^1.20150623.0"
+  }
+}
