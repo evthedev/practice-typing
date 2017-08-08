@@ -3,7 +3,13 @@
 /**
  * Class representing a parser result
  */
+
 export default class Result {
+
+values: string[]
+unconsumedStrings: string[]
+input: string
+
   /**
    * Creates the result
    */
@@ -19,7 +25,7 @@ export default class Result {
    * @param  {String} unconsumedString unconsumed string
    * @return {Result} this result
    */
-  push (value, unconsumedString) {
+  push (value: string, unconsumedString: string) {
     this.values.push(value)
     this.unconsumedStrings.push(unconsumedString)
     return this
@@ -30,6 +36,8 @@ export default class Result {
    * @param  {Result} result result to concatenate
    * @return {Result} this result
    */
+
+  // I don't know this one :(
   concat (result) {
     return result.reduce((prev, value, string) => prev.push(value, string), Result.copy(this))
   }
@@ -46,6 +54,8 @@ export default class Result {
    * Iterates a result using a function
    * @param  {Function} fn function to iterate results
    */
+  
+  // I don't know this one :(
   forEach (fn) {
     this.entries().forEach((pair) => fn(...pair))
   }
